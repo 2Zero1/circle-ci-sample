@@ -1,5 +1,5 @@
-const sum = () => {
-    return 7;
+const sum = (a,b) => {
+    return a+b;
 }
 
 test('sum', () => {
