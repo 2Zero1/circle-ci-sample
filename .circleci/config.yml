@@ -22,6 +22,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - setup_remote_docker
+
       - run: |
           npm test
           npm run lint
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker build -t baayoo23/cd-sample:${CIRCLE_SHA1::7} .
+          docker push baayoo23/cd-sample:${CIRCLE_SHA1::7} 

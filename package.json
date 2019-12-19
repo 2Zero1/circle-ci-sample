@@ -17,5 +17,8 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jest": "^23.1.1",
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
