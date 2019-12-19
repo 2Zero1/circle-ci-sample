@@ -7,7 +7,7 @@ const app = express();
 app.get('/', (req, res) => {
   const { query } = req;
 
-  res.send(`Hello ${query.name}`);
+  res.send(`안녕 ${query.name}`);
 });
 
 app.listen(PORT, HOST, () => {
